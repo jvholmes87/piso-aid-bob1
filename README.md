@@ -3,7 +3,7 @@
 # PISO-AID | Bob 1
 ### A small semi-autonomous pontoon research prototype
 
-**Project lead:** Jason Vaughn Holmes  
+**Project lead:** Jason Von Holmes  
 **Status:** Design development and prototype planning  
 **Updated:** 8 September 2026
 
