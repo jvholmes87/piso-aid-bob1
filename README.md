@@ -17,6 +17,31 @@ A mechanical and electrical design archive, fabrication drawing set, component r
 
 Operational autonomy, payload, endurance and field performance have not been verified in the reviewed evidence. This repository currently contains project documentation, not working control software.
 
+## Component concept
+![Simplified Bob 1 component groups](assets/images/bob1-component-concept.png)
+
+A schematic introduction to the flotation drums, frame, deck and onboard equipment. Component shapes and arrangement are simplified; propulsion is omitted for clarity. This is not an exploded CAD drawing.
+
+## Assembly concept animation
+![Looping schematic of Bob 1 component groups](assets/animations/bob1-assembly-concept.gif)
+
+The layers move together and apart to explain the component groups. Motion, spacing and fit are illustrative, not validated assembly instructions. [Open the animation](assets/animations/bob1-assembly-concept.gif).
+
+## Proposed system architecture
+```mermaid
+flowchart TD
+  O["Operator station"] <--> L["Telemetry link"]
+  L <--> C["Onboard control"]
+  S["Navigation and sensors"] --> C
+  C --> A["Motor and steering control"]
+  A --> P["Propulsion"]
+  B["Battery and power distribution"] -.-> C
+  B -.-> S
+  B -.-> A
+```
+
+Solid arrows show planned information or control paths; dashed arrows indicate power supply. This is a high-level integration concept, not a wiring diagram or a claim of demonstrated autonomy.
+
 ## Development roadmap
 1. Reconcile design requirements and approve a prototype configuration.
 2. Develop and test manual control, telemetry and fault responses.

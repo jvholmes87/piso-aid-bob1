@@ -1,0 +1,9 @@
+flowchart TD
+  O["Operator station"] <--> L["Telemetry link"]
+  L <--> C["Onboard control"]
+  S["Navigation and sensors"] --> C
+  C --> A["Motor and steering control"]
+  A --> P["Propulsion"]
+  B["Battery and power distribution"] -.-> C
+  B -.-> S
+  B -.-> A
