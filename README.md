@@ -1,3 +1,5 @@
+<img width="800" height="568" alt="BOB 1_HDES_Original CAD isometric rendering" src="https://github.com/user-attachments/assets/f760ea94-c1a0-4e0c-b206-d69ac07fcaab" />
+
 # PISO-AID | Bob 1
 ### A small semi-autonomous pontoon research prototype
 
