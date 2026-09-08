@@ -1,0 +1,8 @@
+# Keep local confidential material out of the public repository
+private/
+private-package/
+.env
+.env.*
+*.bak
+~$*
+
