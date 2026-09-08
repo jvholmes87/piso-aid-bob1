@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1130" viewBox="0 0 1200 1130" role="img" aria-labelledby="title desc">
+<title id="title">Bob 1 development milestones</title><desc id="desc">Six proposed phases from design reconciliation to next-stage funding. Completion is not implied. Each phase identifies its objective and evidence sought.</desc>
+<rect width="1200" height="1130" fill="#f3f6fa"/>
+<rect width="1200" height="185" fill="#122b45"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="54" y="48" fill="#65d5d0" font-size="19" letter-spacing="3">PISO-AID / BOB 1</text>
+<text x="54" y="99" fill="white" font-size="40" font-weight="700">Development milestones</text>
+<text x="54" y="140" fill="#d7e3ee" font-size="21">A path from design records to measured prototype evidence</text>
+<path d="M89 247V979" stroke="#b5c6d5" stroke-width="4"/>
+<rect x="128" y="212" width="1018" height="119" rx="12" fill="white" stroke="#d9e2eb"/>
+<circle cx="89" cy="252" r="27" fill="#166c79"/>
+<text x="89" y="260" text-anchor="middle" fill="white" font-size="22" font-weight="700">01</text>
+<text x="154" y="244" fill="#122b45" font-size="25" font-weight="700">Design reconciliation</text>
+<text x="154" y="275" fill="#334d64" font-size="20">Approve one prototype configuration.</text>
+<text x="154" y="306" fill="#166c79" font-size="19">Evidence: reviewed requirements, decisions and interfaces.</text><rect x="128" y="349" width="1018" height="119" rx="12" fill="white" stroke="#d9e2eb"/>
+<circle cx="89" cy="389" r="27" fill="#166c79"/>
+<text x="89" y="397" text-anchor="middle" fill="white" font-size="22" font-weight="700">02</text>
+<text x="154" y="381" fill="#122b45" font-size="25" font-weight="700">Bench integration</text>
+<text x="154" y="412" fill="#334d64" font-size="20">Demonstrate manual control and telemetry.</text>
+<text x="154" y="443" fill="#166c79" font-size="19">Evidence: repeatable bench results, including fault responses.</text><rect x="128" y="486" width="1018" height="119" rx="12" fill="white" stroke="#d9e2eb"/>
+<circle cx="89" cy="526" r="27" fill="#166c79"/>
+<text x="89" y="534" text-anchor="middle" fill="white" font-size="22" font-weight="700">03</text>
+<text x="154" y="518" fill="#122b45" font-size="25" font-weight="700">Prototype assembly</text>
+<text x="154" y="549" fill="#334d64" font-size="20">Integrate and inspect the hardware.</text>
+<text x="154" y="580" fill="#166c79" font-size="19">Evidence: as-built records and inspection results.</text><rect x="128" y="623" width="1018" height="119" rx="12" fill="white" stroke="#d9e2eb"/>
+<circle cx="89" cy="663" r="27" fill="#166c79"/>
+<text x="89" y="671" text-anchor="middle" fill="white" font-size="22" font-weight="700">04</text>
+<text x="154" y="655" fill="#122b45" font-size="25" font-weight="700">Supervised trials</text>
+<text x="154" y="686" fill="#334d64" font-size="20">Measure operation under recorded conditions.</text>
+<text x="154" y="717" fill="#166c79" font-size="19">Evidence: performance data and documented anomalies.</text><rect x="128" y="760" width="1018" height="119" rx="12" fill="white" stroke="#d9e2eb"/>
+<circle cx="89" cy="800" r="27" fill="#166c79"/>
+<text x="89" y="808" text-anchor="middle" fill="white" font-size="22" font-weight="700">05</text>
+<text x="154" y="792" fill="#122b45" font-size="25" font-weight="700">Constrained autonomy</text>
+<text x="154" y="823" fill="#334d64" font-size="20">Evaluate limited navigation functions.</text>
+<text x="154" y="854" fill="#166c79" font-size="19">Evidence: demonstrations linked to requirements.</text><rect x="128" y="897" width="1018" height="119" rx="12" fill="white" stroke="#d9e2eb"/>
+<circle cx="89" cy="937" r="27" fill="#166c79"/>
+<text x="89" y="945" text-anchor="middle" fill="white" font-size="22" font-weight="700">06</text>
+<text x="154" y="929" fill="#122b45" font-size="25" font-weight="700">Next-stage funding</text>
+<text x="154" y="960" fill="#334d64" font-size="20">Prepare an evidence-backed development request.</text>
+<text x="154" y="991" fill="#166c79" font-size="19">Evidence: test results, quotations and stakeholder input.</text><text x="54" y="1072" fill="#334d64" font-size="19">PLANNED SEQUENCE • Completion, dates and funding amounts are not implied.</text>
+<text x="54" y="1102" fill="#52687b" font-size="17">Current status: design development and prototype planning | Source: docs/roadmap.md</text></g></svg>

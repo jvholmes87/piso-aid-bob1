@@ -1,4 +1,9 @@
 # Development roadmap
+
+![Six planned development phases and their evidence expectations](../assets/images/bob1-development-roadmap.svg)
+
+The table below provides the graphic's phase objectives and evidence expectations.
+
 | Phase | Objective | Evidence sought |
 |---|---|---|
 | Design reconciliation | Establish one approved configuration | Reviewed requirements, decisions and interface definitions |

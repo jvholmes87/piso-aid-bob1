@@ -1,4 +1,4 @@
-<img width="800" height="568" alt="BOB 1_HDES_Original CAD isometric rendering" src="assets/bob1-isometric-01.png.png" />
+![Bob 1 original isometric design rendering](assets/bob1-isometric-01.png.png)
 
 # PISO-AID | Bob 1
 ### A small semi-autonomous pontoon research prototype
@@ -17,37 +17,25 @@ A mechanical and electrical design archive, fabrication drawing set, component r
 
 Operational autonomy, payload, endurance and field performance have not been verified in the reviewed evidence. This repository currently contains project documentation, not working control software.
 
-## Component concept
-![Simplified Bob 1 component groups](assets/images/bob1-component-concept.png)
+## Design visuals
 
-A schematic introduction to the flotation drums, frame, deck and onboard equipment. Component shapes and arrangement are simplified; propulsion is omitted for clarity. This is not an exploded CAD drawing.
+| Isometric view 02 | Isometric view 04 |
+|---|---|
+| ![Bob 1 isometric view 02](assets/bob1-isometric-02.png.png) | ![Bob 1 isometric view 04](assets/bob1-isometric-04.png.png) |
 
-## Assembly concept animation
-![Looping schematic of Bob 1 component groups](assets/animations/bob1-assembly-concept.gif)
+### Exploded-view animation
 
-The layers move together and apart to explain the component groups. Motion, spacing and fit are illustrative, not validated assembly instructions. [Open the animation](assets/animations/bob1-assembly-concept.gif).
+![Bob 1 exploded-view design animation](assets/bob1-exploded-view.gif)
 
-## Proposed system architecture
-```mermaid
-flowchart TD
-  O["Operator station"] <--> L["Telemetry link"]
-  L <--> C["Onboard control"]
-  S["Navigation and sensors"] --> C
-  C --> A["Motor and steering control"]
-  A --> P["Propulsion"]
-  B["Battery and power distribution"] -.-> C
-  B -.-> S
-  B -.-> A
-```
+The uploaded renderings and animation illustrate the design concept. They do not establish a built or tested prototype. [Open the animation](assets/bob1-exploded-view.gif).
 
-Solid arrows show planned information or control paths; dashed arrows indicate power supply. This is a high-level integration concept, not a wiring diagram or a claim of demonstrated autonomy.
+See the [system overview](docs/system-overview.md) for the general arrangement and original system block diagram.
 
 ## Development roadmap
-1. Reconcile design requirements and approve a prototype configuration.
-2. Develop and test manual control, telemetry and fault responses.
-3. Integrate the physical prototype and document its as-built configuration.
-4. Conduct supervised water trials and measure performance.
-5. Evaluate constrained autonomy and prepare the next development phase.
+
+![Six planned Bob 1 development milestones and evidence sought](assets/images/bob1-development-roadmap.svg)
+
+The six phases run from design reconciliation through next-stage funding. Completion, dates and funding amounts are not implied.
 
 Read the [roadmap](docs/roadmap.md), [current status](docs/status.md) and [system overview](docs/system-overview.md).
 

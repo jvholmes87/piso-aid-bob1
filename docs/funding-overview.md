@@ -2,6 +2,12 @@
 ## Development objective
 Move from an evolving design package toward a documented prototype demonstration with supervised operation, telemetry and measured results.
 
+## Development milestones for prospective supporters
+
+![Bob 1 planned development milestones and evidence sought](../assets/images/bob1-development-roadmap.svg)
+
+Support can be scoped to the work and evidence needed for each phase. This is a development plan, not a funding commitment or an assertion that earlier milestones are complete. See the [roadmap](roadmap.md).
+
 ## Potential uses of funding
 Engineering review and design reconciliation; approved component procurement; fabrication; control and telemetry development; instrumentation; supervised testing; technical documentation.
 
