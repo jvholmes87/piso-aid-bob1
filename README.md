@@ -5,7 +5,7 @@
 
 **Project lead:** Jason Von Holmes  
 **Status:** Design development and prototype planning  
-**Updated:** 8 September 2026
+**Updated:** 6 October 2026
 
 ## The project
 Bob 1 explores a small waterborne platform for supervised cargo and remote-observation experiments. It is intended to provide a practical foundation for integrating propulsion, sensing, telemetry and limited autonomous navigation.
@@ -15,7 +15,17 @@ The original project brief envisages prototype fabrication in South Korea and po
 ## What exists today
 A mechanical and electrical design archive, fabrication drawing set, component references and high-level system documentation have been assembled. A document review identified configuration and integration issues to resolve before establishing an approved build.
 
-Operational autonomy, payload, endurance and field performance have not been verified in the reviewed evidence. This repository currently contains project documentation, not working control software.
+Operational autonomy, payload, endurance and field performance have not been verified in the reviewed evidence. This repository contains project documentation and a runnable visual explorer; vehicle-control software is not included.
+
+## Interactive visual explorer
+
+[![BOB 1 full-assembly visual explorer preview](docs/visual-explorer/assets/explorer-preview.png)](docs/visual-explorer/README.md#run)
+
+The owner-approved **Visual Explorer v0.3** adds a rotatable assembled/exploded view, selectable components, a 30-row parts index and a flotation scenario calculator. It uses the official HDES logo and orange/charcoal palette, with Metric, Imperial (US), and Both measurement displays.
+
+**Run it:** [download the single-file HTML](docs/visual-explorer/BOB1_Visual_Explorer_v0.3.html) using GitHub's Download raw file button, then open it in your browser. It runs offline without installation. [Source and instructions](docs/visual-explorer/README.md) · [Calculation and source basis](docs/visual-explorer/SOURCE_REGISTER.md).
+
+The assembly remains schematic; small hardware is grouped and enclosure internals are not individually modeled. The calculator does not establish safe payload or stability. Exact Facundo/Scandia webfonts and real-browser layout verification remain outstanding. A live GitHub Pages deployment is not confirmed.
 
 ## Design visuals
 
