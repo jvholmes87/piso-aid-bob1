@@ -1,0 +1,35 @@
+:root{color-scheme:light;--bg:#f5f5f5;--panel:#ffffff;--line:#d0d0d0;--text:#2e2e2e;--muted:#595959;--accent:#ff6600}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Scandia",Arial,sans-serif}header,main,footer{max-width:1320px;margin:auto;padding:24px 36px}header{display:flex;align-items:center;justify-content:space-between;border-bottom:4px solid var(--accent);background:#2e2e2e}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.brand{color:white;font-size:26px;font-weight:800;letter-spacing:2px}.brand b{color:var(--accent)}.brand span{display:block;font-size:10px;font-weight:500;letter-spacing:2.4px;color:#ffffff}.intro{padding:40px 0 30px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--text);font-weight:700;margin:0 0 10px}h1{font-size:clamp(32px,4vw,54px);line-height:1.16;letter-spacing:-1.8px;margin:12px 0 20px}h1 em{font-style:normal;color:var(--muted)}.intro>p:not(.eyebrow){max-width:720px;color:var(--muted)}h2{font-size:25px;line-height:1.25;margin:0 0 12px}h3{font-size:24px;margin:24px 0 12px}p{margin:12px 0}.chips,.actions{display:flex;flex-wrap:wrap;gap:10px}.chips span,.badge{padding:5px 10px;border:1px solid var(--line);border-radius:5px;font-size:12px;color:var(--muted)}.panel{padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:24px}.workbench{display:grid;grid-template-columns: minmax(0,2.7fr) minmax(230px,1fr);gap:24px}.section-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.badge{white-space:nowrap}.viewer{padding-bottom:18px}#model{width:100%;height:380px;display:block;background:radial-gradient(ellipse at center,#ffffff,#f5f5f5 65%)}label{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}.controls>label{display:grid;grid-template-columns:70px 1fr 48px;margin-bottom:12px}input[type=range]{accent-color:var(--accent);width:100%;min-width:0}output{font-variant-numeric:tabular-nums;color:var(--text);white-space:nowrap}.actions{align-items:center;margin-top:20px}button,select{font:inherit;color:#ffffff;background:#2e2e2e;border:1px solid #2e2e2e;border-radius:6px;padding:8px 12px;cursor:pointer}button:hover,button[aria-pressed=true]{border-color:var(--accent);background:#ff6600;color:#2e2e2e}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.caption{font-size:12px;color:var(--muted)}.component-buttons{display:grid;gap:10px}.component-buttons button{text-align:left}.spec{border-left:3px solid var(--accent);padding:12px;background:#fff0e6;font-size:14px;color:var(--muted)}aside p{color:var(--muted)}.calc-grid{display:grid;grid-template-columns:1fr 1.2fr .8fr;gap:24px;align-items:center}.inputs>label{display:flex;flex-wrap:wrap;margin:20px 0}.inputs select{width:100%;font-size:14px}#water{width:100%;display:block}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:20px}.metrics small{display:block;font-size:12px;color:var(--muted)}.metrics strong{font-size:27px;letter-spacing:-1px}.note{padding:14px 18px;background:#fff0e6;border-left:3px solid var(--accent);font-size:14px}.note.exceeded{border-color:#2e2e2e;background:#ffe0cc}details{color:var(--muted);font-size:13px}summary{cursor:pointer;color:var(--text)}.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}.step{border-top:3px solid var(--line);padding-top:14px}.step span{font-size:12px;color:var(--text)}.step h3{font-size:18px;margin:8px 0}.step p{font-size:14px;color:var(--muted)}.sources li{font-size:14px;color:var(--muted);margin-bottom:12px}footer{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:10px} @media(max-width:900px){.workbench{grid-template-columns:1fr}.calc-grid{grid-template-columns:1fr 1fr}.metrics{grid-column:1/-1;grid-template-columns:repeat(4,1fr)}.timeline{grid-template-columns:1fr 1fr}}@media(max-width:560px){header,main,footer{padding:20px}header>a:last-child{font-size:12px}.panel{padding:18px}.section-head{flex-wrap:wrap}#model{height:270px}.calc-grid{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr}.brand{font-size:22px}.brand span{font-size:8px}footer{flex-direction:column}h1{letter-spacing:-1px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+
+/* Brand guide prose specifies Facundo/Scandia. Local fonts are used if installed;
+   no distributable webfont files for those families were found in the brand assets. */
+@font-face{font-family:Facundo;src:local("Facundo"),local("Facundo Regular");font-weight:400;font-display:swap}
+@font-face{font-family:Scandia;src:local("Scandia"),local("Scandia Regular"),local("Scandia Web Regular");font-weight:400;font-display:swap}
+h1,h2,h3,.brand{font-family:"Facundo",Arial,sans-serif}
+.unit-bar{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:24px 0;padding:16px;background:white;border-left:4px solid var(--accent)}
+.unit-bar span{font-size:12px;color:var(--muted)}
+.unit-bar select,.inputs select{background:#ffffff;color:#2e2e2e}
+header>a:last-child{color:#ffb380}
+.metrics strong{font-size:23px;display:block;line-height:1.4}
+.chips span{background:#ffffff}
+.eyebrow{border-left:3px solid var(--accent);padding-left:9px}
+@media(max-width:560px){.unit-bar select{width:100%;font-size:13px}.metrics strong{font-size:20px}.inputs select{font-size:12px}.brand span{letter-spacing:.5px}}
+
+/* Official logo is displayed without cropping, recolouring, distortion or effects. */
+header{background:#ffffff;color:#2e2e2e;gap:24px}
+header>a:last-child{color:#2e2e2e}
+.brand{display:flex;align-items:center;gap:20px;text-decoration:none}
+.hdes-logo{display:block;width:230px;height:auto;min-width:160px;background:#ffffff}
+.brand .project-label{color:#2e2e2e;font-size:13px;letter-spacing:1px}
+.component-buttons{grid-template-columns:1fr 1fr;max-height:300px;overflow:auto;padding:3px}
+.component-buttons button{font-size:12px;padding:9px}
+#model{height:460px}
+.controls>.full-control{display:flex;margin-bottom:20px;font-weight:700;color:#2e2e2e}
+.controls>.full-control input{accent-color:#ff6600}
+.table-scroll{overflow:auto;max-height:500px}
+table{width:100%;border-collapse:collapse;font-size:13px;text-align:left}
+th{background:#2e2e2e;color:white;position:sticky;top:0;z-index:1}
+th,td{padding:10px;border-bottom:1px solid #d0d0d0;vertical-align:top}
+td button{background:#ffffff;color:#2e2e2e;border:0;padding:0;text-align:left;text-decoration:underline;font-size:13px}
+.drawing-reference{display:block;width:100%;height:auto;margin-top:16px;background:white}
+#model polygon[data-part]{cursor:pointer}
+@media(max-width:560px){header{padding:12px;gap:8px}.brand{flex-direction:column;gap:0;align-items:flex-start}.hdes-logo{width:200px}.brand .project-label{font-size:10px;padding-left:20px}#model{height:340px}.component-buttons{max-height:240px}}
