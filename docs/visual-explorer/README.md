@@ -4,7 +4,9 @@ An offline-capable visual starter for the PISO-AID / BOB 1 project, prepared for
 
 ## Run
 
-Open `BOB1_Visual_Explorer_v0.3.html` directly in a browser. It bundles the same styles and JavaScript as the editable source.
+**Run it:** [Open the hosted BOB 1 Visual Explorer](https://jvholmes87.github.io/piso-aid-bob1/visual-explorer/). It runs directly in your browser without downloading or installing anything.
+
+For optional offline use, download `BOB1_Visual_Explorer_v0.3.html` and open it locally. It bundles the same styles and JavaScript as the editable source.
 
 For source development, open `index.html` directly, or run `python3 -m http.server 8080` from this folder and visit `http://localhost:8080`.
 
@@ -35,11 +37,9 @@ Equipment X/Y centres follow drawing 0001: the deck-centred display uses x=(X−
 
 The original sheet-1 drawing is rendered directly from the project PDF as an expandable reference. Its annotations retain original metric units.
 
-## GitHub handoff
+## GitHub hosting
 
-Recommended repository location: `docs/visual-explorer/`. Copy `index.html` and `assets/` there. Preserve existing `docs/index.html` and existing Pages configuration. If Pages already publishes `docs/`, the explorer can be linked at `visual-explorer/` relative to the existing site root. Otherwise configure Pages separately after reviewing the repository.
-
-Add a README link to the explorer once its published URL is confirmed. A preview image can later link to the same page. This folder contains the owner-approved v0.3 repository addition. A live Pages deployment is not confirmed; the portable HTML can be downloaded and opened locally.
+GitHub Pages publishes `docs/` from `main`. The explorer is hosted at [https://jvholmes87.github.io/piso-aid-bob1/visual-explorer/](https://jvholmes87.github.io/piso-aid-bob1/visual-explorer/). The repository site root redirects to the explorer. Changes merged into `main` are deployed by GitHub's existing Pages build and deployment workflow.
 
 ## Source layout
 
@@ -69,6 +69,6 @@ The calculator assumes four equal horizontal circular cylinders, nominal 60 L ea
 2. Replace nominal drum assumptions with measured manufacturer geometry and sealed volume.
 3. Add dated photos, measured masses, and test observations.
 4. Replace schematic pad/strap/frame locations with verified coordinates.
-5. Confirm GitHub Pages location and deploy through a reviewed repository change.
+5. Continue browser and device checks on the hosted explorer.
 
 No source design drawings or existing project files were modified.

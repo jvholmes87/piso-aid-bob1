@@ -19,13 +19,13 @@ Operational autonomy, payload, endurance and field performance have not been ver
 
 ## Interactive visual explorer
 
-[![BOB 1 full-assembly visual explorer preview](docs/visual-explorer/assets/explorer-preview.png)](docs/visual-explorer/README.md#run)
+[![BOB 1 full-assembly visual explorer preview](docs/visual-explorer/assets/explorer-preview.png)](https://jvholmes87.github.io/piso-aid-bob1/visual-explorer/)
 
 The owner-approved **Visual Explorer v0.3** adds a rotatable assembled/exploded view, selectable components, a 30-row parts index and a flotation scenario calculator. It uses the official HDES logo and orange/charcoal palette, with Metric, Imperial (US), and Both measurement displays.
 
-**Run it:** [download the single-file HTML](docs/visual-explorer/BOB1_Visual_Explorer_v0.3.html) using GitHub's Download raw file button, then open it in your browser. It runs offline without installation. [Source and instructions](docs/visual-explorer/README.md) · [Calculation and source basis](docs/visual-explorer/SOURCE_REGISTER.md).
+**Run it:** [Open the hosted BOB 1 Visual Explorer](https://jvholmes87.github.io/piso-aid-bob1/visual-explorer/). It runs directly in your browser through this repository's GitHub Pages site. [Source and instructions](docs/visual-explorer/README.md) · [Calculation and source basis](docs/visual-explorer/SOURCE_REGISTER.md). The single-file HTML remains available for optional offline use.
 
-The assembly remains schematic; small hardware is grouped and enclosure internals are not individually modeled. The calculator does not establish safe payload or stability. Exact Facundo/Scandia webfonts and real-browser layout verification remain outstanding. A live GitHub Pages deployment is not confirmed.
+The assembly remains schematic; small hardware is grouped and enclosure internals are not individually modeled. The calculator does not establish safe payload or stability. Exact Facundo/Scandia webfonts and real-browser layout verification remain outstanding.
 
 ## Design visuals
 
