@@ -47,8 +47,9 @@ flowchart LR
 
 The existing repository contains an original system block diagram and references to electrical schematics, but those materials do not establish a tested or approved autopilot configuration.
 
-Before procurement or integration, the project must reconcile at least the following interfaces with the existing electrical design:
+No component-level conflict is confirmed from the public documentation alone. Before procurement or integration, the project must resolve the following known architecture gaps and check for conflicts with the existing electrical design:
 
+- the existing high-level control/processing concept has not yet been reconciled to the proposed Cube Orange+ / Pixhawk 6X architecture;
 - flight-controller input-voltage and protected-power path;
 - propulsion/steering command interfaces;
 - GPS/compass interface and mounting assumptions;
