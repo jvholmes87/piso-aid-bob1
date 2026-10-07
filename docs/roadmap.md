@@ -1,8 +1,18 @@
 # Development roadmap
 
-![Six planned development phases and their evidence expectations](../assets/images/bob1-development-roadmap.svg)
+## Three-stage scaling view
 
-The table below provides the graphic's phase objectives and evidence expectations.
+| Stage | Purpose | Evidence produced | Likely funding fit |
+|---|---|---|---|
+| Bob 1 (USV test platform) | Prove supervised navigation at small scale | Test logs vs. acceptance criteria | Self-funded / small grants |
+| Bob 2 (cargo prototype) | Cargo handling, endurance, shallow-draft performance | Payload and endurance data | NSF SBIR/STTR Phase I |
+| Full-scale pilot | Crewed supervised-autonomy pilot on U.S. inland waters | Operational and safety data | SBIR/STTR Phase II, DoD, MARAD, port partners |
+
+This scaling view identifies a possible development sequence and funding fit for evaluation. It does not imply eligibility, award likelihood, completion, dates, or funding amounts.
+
+## Bob 1 development milestones
+
+![Six planned development phases and their evidence expectations](../assets/images/bob1-development-roadmap.svg)
 
 | Phase | Objective | Evidence sought |
 |---|---|---|
@@ -10,8 +20,9 @@ The table below provides the graphic's phase objectives and evidence expectation
 | Bench integration | Demonstrate manual controls and telemetry | Repeatable results including fault responses |
 | Prototype assembly | Integrate hardware | As-built record and inspections |
 | Supervised trials | Measure basic operation | Recorded conditions, performance and anomalies |
-| Constrained autonomy | Evaluate limited navigation | Requirement-linked demonstrations |
+| Constrained autonomy | Evaluate supervised waypoint navigation | Requirement-linked demonstrations |
 | Next-stage funding | Define a supported development request | Test evidence, quotations and stakeholder input |
 
-No dates or successful results are implied by this roadmap. Progress updates will identify completed work, evidence, limitations and next steps.
+No dates, successful results, or funding amounts are implied by this roadmap. Progress updates will identify completed work, evidence, limitations and next steps.
 
+Related: [research questions](research-questions.md) · [acceptance criteria](acceptance-criteria.md) · [test plan](test-plan.md)
