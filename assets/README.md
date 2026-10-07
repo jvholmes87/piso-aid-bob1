@@ -4,14 +4,14 @@
 
 | File | Documentation use |
 |---|---|
-| [bob1-isometric-01.png.png](bob1-isometric-01.png.png) | README lead image |
-| [bob1-isometric-02.png.png](bob1-isometric-02.png.png) | README gallery |
-| [bob1-isometric-04.png.png](bob1-isometric-04.png.png) | README gallery |
+| [bob1-isometric-01.png](bob1-isometric-01.png) | README lead image |
+| [bob1-isometric-02.png](bob1-isometric-02.png) | README gallery |
+| [bob1-isometric-04.png](bob1-isometric-04.png) | README gallery |
 | [bob1-exploded-view.gif](bob1-exploded-view.gif) | README and system overview |
-| [bob1-general-arrangement.png.png](bob1-general-arrangement.png.png) | System overview |
+| [bob1-general-arrangement.png](bob1-general-arrangement.png) | System overview |
 | [bob1-system-block-diagram.png.PNG](bob1-system-block-diagram.png.PNG) | System overview |
 
-Uploaded filenames are preserved. View 03 has the same Git blob as view 02, so it is retained but not repeated in the gallery. These design visuals do not establish a built prototype, approved configuration or demonstrated performance.
+The duplicate `.png.png` suffixes were normalized in v0.4 without changing the image content. View 03 has the same Git blob as view 02, so it is retained but not repeated in the gallery. These design visuals do not establish a built prototype, approved configuration or demonstrated performance.
 
 ## Development milestones
 
