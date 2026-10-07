@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use or reference this project, please cite it using the metadata below."
+title: "PISO-AID | Bob 1"
+version: "0.4"
+type: software
+authors:
+  - family-names: "Holmes"
+    given-names: "Jason V."
+    orcid: "https://orcid.org/0009-0007-2898-8478"
+    affiliation: "HDES"
+repository-code: "https://github.com/jvholmes87/piso-aid-bob1"
+url: "https://github.com/jvholmes87/piso-aid-bob1"
