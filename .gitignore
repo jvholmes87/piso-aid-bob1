@@ -6,3 +6,4 @@ private-package/
 *.bak
 ~$*
 
+docs/visual-explorer/*.zip

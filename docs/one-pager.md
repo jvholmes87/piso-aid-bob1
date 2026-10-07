@@ -8,6 +8,8 @@ U.S. inland waterways carry nearly 500 million tons of freight each year. The sy
 
 PISO-AID is investigating supervised autonomy on low-cost, shallow-draft platforms. Bob 1 is a small uncrewed surface vehicle (USV) test platform for navigation, telemetry, logging, and operator-intervention methods. Full-scale vessels are envisioned as crewed platforms with supervised autonomy.
 
+![Scale path](../assets/images/bob1-scale-path.svg)
+
 ## Current status
 
 Bob 1 is in design development and prototype planning. Mechanical/electrical design material and public documentation exist, but no prototype has been built or water-tested. The proposed Cube Orange+ / ArduPilot Rover control stack has not been purchased, integrated, or tested, and no vehicle-control software is included in this repository.
@@ -37,6 +39,8 @@ Engineering review, components, fabrication/integration support, instrumentation
 - [Roadmap](roadmap.md)
 - [Funding overview](funding-overview.md)
 - [Regulatory approach](regulatory-approach.md)
+- [Drawing register](drawing-register.md)
+- [Draft and stability chart](../assets/images/bob1-hull-draft-stability.png)
 
 ## Sources
 

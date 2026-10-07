@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="t d">
+<title id="t">PISO-AID scale path</title>
+<desc id="d">Three stages: Bob 1 small USV test platform, Bob 2 cargo prototype, and a crewed full-scale inland-waterway pilot. Only Bob 1 has a design package. Sizes for later stages are conceptual.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#cccccc"/></marker></defs>
+<rect width="1200" height="520" fill="#f5f5f5"/>
+<rect width="1200" height="92" fill="#2e2e2e"/>
+<g font-family="Facundo, Scandia, Arial, Helvetica, sans-serif">
+<text x="48" y="38" fill="#ff6600" font-size="14" letter-spacing="3">PISO-AID</text>
+<text x="48" y="70" fill="#ffffff" font-size="26" font-weight="700">Scale path · from test platform to crewed inland pilot</text>
+
+<!-- stage 1 -->
+<rect x="48" y="130" width="340" height="330" rx="12" fill="#ffffff" stroke="#ff6600" stroke-width="2"/>
+<text x="68" y="160" fill="#ff6600" font-size="13" letter-spacing="2" font-weight="700">STAGE 1 · CURRENT</text>
+<text x="68" y="190" fill="#2e2e2e" font-size="22" font-weight="700">Bob 1</text>
+<text x="68" y="212" fill="#595959" font-size="13">USV test platform · 1.5 × 0.8 m deck · 4 drums</text>
+<!-- pontoon icon -->
+<g transform="translate(68,232)">
+<rect x="0" y="22" width="150" height="8" fill="#ffb380"/>
+<rect x="0" y="30" width="150" height="4" fill="#595959"/>
+<rect x="10" y="36" width="56" height="20" rx="10" fill="#a6a6a6"/>
+<rect x="84" y="36" width="56" height="20" rx="10" fill="#a6a6a6"/>
+<rect x="60" y="0" width="30" height="22" fill="#2e2e2e"/>
+<line x1="-6" y1="48" x2="162" y2="48" stroke="#ff6600" stroke-width="2" stroke-dasharray="4 3"/>
+</g>
+<text x="68" y="322" fill="#2e2e2e" font-size="14" font-weight="700">Proves</text>
+<text x="68" y="342" fill="#595959" font-size="13">Supervised waypoint navigation at small scale</text>
+<text x="68" y="376" fill="#2e2e2e" font-size="14" font-weight="700">Evidence</text>
+<text x="68" y="396" fill="#595959" font-size="13">Test logs vs. acceptance criteria</text>
+<text x="68" y="430" fill="#2e2e2e" font-size="14" font-weight="700">Funding fit</text>
+<text x="68" y="450" fill="#595959" font-size="13">Self-funded · small grants</text>
+
+<path d="M396 295H430" stroke="#cccccc" stroke-width="3" marker-end="url(#a)"/>
+
+<!-- stage 2 -->
+<rect x="440" y="130" width="340" height="330" rx="12" fill="#ffffff" stroke="#cccccc"/>
+<text x="460" y="160" fill="#595959" font-size="13" letter-spacing="2" font-weight="700">STAGE 2 · PLANNED</text>
+<text x="460" y="190" fill="#2e2e2e" font-size="22" font-weight="700">Bob 2</text>
+<text x="460" y="212" fill="#595959" font-size="13">Cargo prototype · size to be defined</text>
+<g transform="translate(460,222)">
+<rect x="0" y="32" width="210" height="10" fill="#ffb380"/>
+<rect x="0" y="42" width="210" height="5" fill="#595959"/>
+<rect x="12" y="49" width="80" height="24" rx="12" fill="#a6a6a6"/>
+<rect x="118" y="49" width="80" height="24" rx="12" fill="#a6a6a6"/>
+<rect x="30" y="4" width="60" height="28" fill="#2e2e2e"/>
+<rect x="110" y="10" width="60" height="22" fill="#2e2e2e" opacity=".6"/>
+<line x1="-6" y1="64" x2="222" y2="64" stroke="#ff6600" stroke-width="2" stroke-dasharray="4 3"/>
+</g>
+<text x="460" y="322" fill="#2e2e2e" font-size="14" font-weight="700">Proves</text>
+<text x="460" y="342" fill="#595959" font-size="13">Cargo handling · endurance · shallow draft</text>
+<text x="460" y="376" fill="#2e2e2e" font-size="14" font-weight="700">Evidence</text>
+<text x="460" y="396" fill="#595959" font-size="13">Payload and endurance data</text>
+<text x="460" y="430" fill="#2e2e2e" font-size="14" font-weight="700">Funding fit</text>
+<text x="460" y="450" fill="#595959" font-size="13">NSF SBIR/STTR Phase I</text>
+
+<path d="M788 295H822" stroke="#cccccc" stroke-width="3" marker-end="url(#a)"/>
+
+<!-- stage 3 -->
+<rect x="832" y="130" width="320" height="330" rx="12" fill="#ffffff" stroke="#cccccc"/>
+<text x="852" y="160" fill="#595959" font-size="13" letter-spacing="2" font-weight="700">STAGE 3 · CONCEPT</text>
+<text x="852" y="190" fill="#2e2e2e" font-size="22" font-weight="700">Full-scale pilot</text>
+<text x="852" y="212" fill="#595959" font-size="13">Crewed · supervised autonomy · inland waters</text>
+<g transform="translate(852,216)">
+<rect x="0" y="44" width="270" height="22" fill="#595959"/>
+<rect x="0" y="36" width="270" height="8" fill="#ffb380"/>
+<rect x="20" y="8" width="90" height="28" fill="#2e2e2e"/>
+<rect x="130" y="14" width="40" height="22" fill="#2e2e2e" opacity=".6"/>
+<rect x="180" y="14" width="40" height="22" fill="#2e2e2e" opacity=".6"/>
+<circle cx="70" cy="2" r="6" fill="#ff6600"/>
+<line x1="-6" y1="60" x2="282" y2="60" stroke="#ff6600" stroke-width="2" stroke-dasharray="4 3"/>
+</g>
+<text x="852" y="322" fill="#2e2e2e" font-size="14" font-weight="700">Proves</text>
+<text x="852" y="342" fill="#595959" font-size="13">Operational and safety performance</text>
+<text x="852" y="376" fill="#2e2e2e" font-size="14" font-weight="700">Evidence</text>
+<text x="852" y="396" fill="#595959" font-size="13">Operational and safety data</text>
+<text x="852" y="430" fill="#2e2e2e" font-size="14" font-weight="700">Funding fit</text>
+<text x="852" y="450" fill="#595959" font-size="13">SBIR/STTR Phase II · DoD · MARAD · ports</text>
+
+<text x="48" y="498" fill="#595959" font-size="12">CONCEPTUAL SEQUENCE · Only Bob 1 has a design package. Vessel sizes for Stages 2 and 3 are illustrative. Completion, dates, eligibility and funding amounts are not implied.</text>
+</g>
+</svg>

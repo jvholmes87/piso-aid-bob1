@@ -1,6 +1,6 @@
 # Bob 1 test-run data
 
-This folder is reserved for evidence from actual Bob 1 tests. No test-run results are present at project version 0.4.
+This folder is reserved for evidence from actual Bob 1 tests. No test-run results are present at project version 0.5.
 
 Use one directory per run:
 

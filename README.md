@@ -6,7 +6,7 @@
 **Owning entity:** HDES (U.S. LLC formation in progress)  
 **Project lead:** Jason Von Holmes  
 **Status:** Design development and prototype planning  
-**Updated:** 7 October 2026
+**Updated:** 7 October 2026 (v0.5)
 
 ## The problem
 
@@ -19,6 +19,8 @@ PISO-AID explores supervised autonomy on low-cost, shallow-draft platforms. Bob 
 The proposed control architecture uses an industry-standard small-USV autopilot approach: a CubePilot Cube Orange+ running ArduPilot Rover in boat configuration, with the Holybro Pixhawk 6X retained as an alternative. These components are proposed and have not been purchased, integrated, or tested.
 
 Full-scale vessels are envisioned as **crewed** platforms with supervised autonomy, consistent with current U.S. Coast Guard crewing requirements.
+
+![Bob 1 concept of operations: shore operator station, telemetry link, RC override priority path, and the USV autopilot](assets/images/bob1-conops.svg)
 
 ## Applications
 
@@ -61,7 +63,13 @@ The assembly remains schematic; small hardware is grouped and enclosure internal
 
 The uploaded renderings and animation illustrate the design concept. They do not establish a built or tested prototype. [Open the animation](assets/bob1-exploded-view.gif).
 
-See the [system overview](docs/system-overview.md) for the general arrangement and original system block diagram.
+See the [system overview](docs/system-overview.md) for the general arrangement and original system block diagram, and the [drawing register](docs/drawing-register.md) for the V03 drawing package index.
+
+### Preliminary hull estimate
+
+![Draft and initial stability versus total mass from the September 2026 hull estimate](assets/images/bob1-hull-draft-stability.png)
+
+Summary of the 12 September 2026 preliminary capacity estimate (calculation revision 0): ideal-cylinder flotation model and an initial transverse stability sensitivity at an assumed centre-of-gravity height. The complete-craft CAD mass of 80.4 kg uses about a third of nominal displacement; initial stability margin falls quickly above roughly 120 kg total mass in the modelled geometry. It is not a payload rating. The interactive version is the explorer's load-case lab.
 
 ## Research questions
 
@@ -78,6 +86,8 @@ Read [Research questions](docs/research-questions.md), [Acceptance criteria](doc
 | Bob 1 (USV test platform) | Prove supervised navigation at small scale | Test logs vs. acceptance criteria | Self-funded / small grants |
 | Bob 2 (cargo prototype) | Cargo handling, endurance, shallow-draft performance | Payload and endurance data | NSF SBIR/STTR Phase I |
 | Full-scale pilot | Crewed supervised-autonomy pilot on U.S. inland waters | Operational and safety data | SBIR/STTR Phase II, DoD, MARAD, port partners |
+
+![Three-stage scale path from Bob 1 test platform to a crewed full-scale pilot](assets/images/bob1-scale-path.svg)
 
 ![Six planned Bob 1 development milestones and evidence sought](assets/images/bob1-development-roadmap.svg)
 

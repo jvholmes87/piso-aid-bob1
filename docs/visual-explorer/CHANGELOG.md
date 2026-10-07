@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.1 — 7 October 2026
+
+- Added a preliminary stability screen below the load note, tiered from the hull estimate's GM table (KG = 450 mm, 400–440 mm drum-row spacing). It is a sensitivity band, not a rating.
+- Linked the static draft/stability chart from the calculation-basis notes.
+- Reworded build-path step 02 to "Planned Phase 1"; no prototype has been built.
+- Added stability-tier checks to the Node test harness.
+
 ## v0.3 — 6 October 2026
 
 - Added the official HDES logo unchanged and bundled it for offline viewing.
