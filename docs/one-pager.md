@@ -26,7 +26,7 @@ Engineering review, components, fabrication/integration support, instrumentation
 
 ## Team
 
-**Jason Von Holmes, Project Lead and intended Principal Investigator, HDES** — BS Computer Science, University of Maryland Global Campus (2026); U.S. Air Force civil engineering background; MS student in Information Technology (Systems Engineering concentration), UMGC.
+**Jason Von Holmes, Project Lead and intended Principal Investigator, HDES** — 14 years U.S. Air Force civil engineering; sUAS program manager and operator, 51st Civil Engineer Squadron, Osan AB (2017–2022), including the RADAS airfield-damage-assessment mission ([public record](https://www.af.mil/News/Article-Display/Article/1744946/)); BS Computer Science, University of Maryland Global Campus (2026); MS student, Information Technology (Systems Engineering concentration), UMGC.
 
 ## Contact and full documentation
 
