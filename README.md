@@ -10,7 +10,7 @@
 
 ## The problem
 
-U.S. inland waterways carry nearly 500 million tons of freight annually. The sector also faces operating pressures that include workforce availability, operator fatigue, and low-water conditions that can reduce barge loading. During the 2022 Mississippi River low-water event, loading drafts were reduced to 9 ft 6 in, cutting tons per barge by roughly 20–27%. These conditions motivate research into ways supervised autonomy, better telemetry, and lower-draft platforms could support safer and more flexible operations without assuming that autonomy replaces required crews.
+U.S. inland waterways carry nearly 500 million tons of freight annually. The U.S. mariner shortage has been described as a strategic national-security concern, and the NTSB found operator fatigue caused a 2023 towboat-pier allision on the Lower Mississippi River. During the 2022 Mississippi River low-water event, loading drafts were reduced to 9 ft 6 in, cutting tons per barge by roughly 20–27%. These conditions motivate research into ways supervised autonomy, better telemetry, and lower-draft platforms could support safer and more flexible operations without assuming that autonomy replaces required crews.
 
 ## The approach
 
