@@ -1,0 +1,13 @@
+line,item,qty,est_low_krw,est_high_krw,actual_krw,purchase_date,vendor,note
+1,Welded frame incl. steel and transom (drawing 0003),1,250000,450000,,,,
+2,Pad-eye rectangle plates,4,20000,40000,,,,
+3,Cold-galvanising zinc spray,1,12000,20000,,,,
+4,Marine plywood 9mm cut to 1500x800,1,36000,45000,,,,
+5,Deck sealing and varnish,1,15000,30000,,,,
+6,HDPE drum 60L sealed,4,114400,130000,,,,
+7,EPDM pad stock 25mm,1,30000,50000,,,,
+8,Stainless strap and buckle sets,8,40000,80000,,,,
+9,M6 fasteners (BOM 1.6-1.9),64,10000,20000,,,,
+10,Platform scale 150kg,1,40000,70000,,,,
+11,Transport to/from test site,2,60000,120000,,,,
+12,Float-test consumables,1,40000,70000,,,,

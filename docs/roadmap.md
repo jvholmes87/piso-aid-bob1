@@ -25,4 +25,6 @@ This scaling view identifies a possible development sequence and funding fit for
 
 No dates, successful results, or funding amounts are implied by this roadmap. Progress updates will identify completed work, evidence, limitations and next steps.
 
+Phase 1 (milestones 01–03, bare hull through float check) is costed in [phase1-budget.md](phase1-budget.md).
+
 Related: [research questions](research-questions.md) · [acceptance criteria](acceptance-criteria.md) · [test plan](test-plan.md)

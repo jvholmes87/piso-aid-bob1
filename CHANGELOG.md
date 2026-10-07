@@ -1,5 +1,9 @@
 # Change log
 
+## 0.5.1 — 2026-10-07
+
+Added a Phase 1 budget (bare hull, weigh and float) with estimate-vs-actual columns and a CSV for actuals, based on Korean retail listings read on 7 October 2026. Recorded that the priced 60 L drum (325/400 × 610 mm) differs from the 360 mm ideal cylinder assumed in the hull estimate. No purchase, quotation or funding is claimed.
+
 ## 0.5 — 2026-10-07
 
 Quality pass after the v0.4 research-readiness release. Added a concept-of-operations graphic, a three-stage scale-path graphic, a drawing register for the V03 package, and a static draft/initial-stability chart from the 12 September 2026 hull estimate. Added a tiered stability screen to the explorer's load-case lab with matching tests. Expanded the Team section with the project lead's sUAS program experience and public-record links. Recoloured the milestone roadmap to the HDES palette. Reduced README image weight (isometrics resized to 1600 px, animation re-encoded) and removed a duplicate isometric file. Normalized the remaining `.png.PNG` filename, archived superseded explanatory assets, removed the legacy Mermaid architecture sketch, and recorded the 24 V / 12 V electrical conflict as a reconciliation item.

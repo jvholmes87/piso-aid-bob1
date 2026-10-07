@@ -93,7 +93,7 @@ Read [Research questions](docs/research-questions.md), [Acceptance criteria](doc
 
 The six existing milestones run from design reconciliation through next-stage funding. Completion, dates, and funding amounts are not implied.
 
-Read the [roadmap](docs/roadmap.md), [current status](docs/status.md), [system overview](docs/system-overview.md), and [regulatory approach](docs/regulatory-approach.md).
+Read the [roadmap](docs/roadmap.md), [current status](docs/status.md), [system overview](docs/system-overview.md), [regulatory approach](docs/regulatory-approach.md), and the [Phase 1 budget](docs/phase1-budget.md) (estimate vs. actual, Korean retail pricing, nothing purchased).
 
 ## Team
 

@@ -20,3 +20,5 @@ Each run directory should contain or reference, as applicable:
 - Acceptance-criteria assessment
 
 Do not add inferred, simulated, or placeholder results in a way that could be mistaken for physical test evidence. Simulations, if used later, should be clearly labeled and stored separately from physical run data.
+
+Budget actuals are tracked separately in `data/budget/phase1-budget.csv`; see [docs/phase1-budget.md](../../docs/phase1-budget.md).

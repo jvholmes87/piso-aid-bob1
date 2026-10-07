@@ -14,6 +14,10 @@ Support can be scoped to the work and evidence needed for each phase. This is a 
 
 Engineering review and design reconciliation; approved component procurement; fabrication; control and telemetry integration; instrumentation; supervised testing; technical documentation.
 
+## Phase 1 cost basis
+
+A line-item estimate for the bare hull and float check, with estimate-vs-actual columns, is in [phase1-budget.md](phase1-budget.md). Phase 1 is sized for founder self-funding; it is not a funding request.
+
 ## Evidence to prepare
 
 A defined first mission and stakeholder need; approved requirements; costed work packages; dated supplier quotations; contributor and applicant roles; test methods; acceptance criteria; and a realistic delivery schedule.
