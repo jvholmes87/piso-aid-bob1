@@ -1,5 +1,6 @@
 # System overview
-Bob 1 combines a small pontoon structure, propulsion, battery power, onboard processing, sensors and an operator communications link.
+
+Bob 1 combines a small pontoon structure, propulsion, battery power, onboard control hardware, sensors and an operator communications link.
 
 | Element | Intended function |
 |---|---|
@@ -7,16 +8,15 @@ Bob 1 combines a small pontoon structure, propulsion, battery power, onboard pro
 | Propulsion and steering | Enable controlled motion |
 | Power | Supply monitored, protected electrical power |
 | Sensors | Provide position, attitude and environmental observations |
-| Control software | Support manual control and later constrained autonomy |
+| Control system | Support manual control and later supervised autonomy |
 | Communications | Exchange commands, status and telemetry |
 | Operator interface | Support supervision, intervention and recovery |
 
 Final equipment selections and performance requirements remain under development. These functions describe design intent, not demonstrated capability.
 
-
 ## General arrangement
 
-![Bob 1 general arrangement](../assets/bob1-general-arrangement.png.png)
+![Bob 1 general arrangement](../assets/bob1-general-arrangement.png)
 
 Design-reference view supplied by the project lead. Configuration and dimensions remain subject to engineering reconciliation.
 
@@ -25,6 +25,8 @@ Design-reference view supplied by the project lead. Configuration and dimensions
 ![Bob 1 system block diagram](../assets/bob1-system-block-diagram.png.PNG)
 
 This source-design diagram does not establish tested software, final equipment selections or verified performance. [Open full-size diagram](../assets/bob1-system-block-diagram.png.PNG).
+
+The proposed supervised-autonomy stack is documented separately in [control-architecture.md](control-architecture.md). It has not been purchased, integrated, or tested.
 
 ## Assembly visualization
 
