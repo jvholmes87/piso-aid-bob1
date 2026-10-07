@@ -97,7 +97,9 @@ Read the [roadmap](docs/roadmap.md), [current status](docs/status.md), [system o
 
 ## Team
 
-**Jason Von Holmes, Project Lead and intended Principal Investigator, HDES.** 14 years in U.S. Air Force civil engineering; quality control and project coordination on U.S. federal construction task orders in South Korea. BS Computer Science, University of Maryland Global Campus (2026). MS student, Information Technology (Systems Engineering concentration), UMGC. ORCID: 0009-0007-2898-8478.
+**Jason Von Holmes, Project Lead and intended Principal Investigator, HDES.** 14 years in U.S. Air Force civil engineering. Small Unmanned Aircraft Systems program manager and operator, 51st Civil Engineer Squadron, Osan Air Base (2017–2022): managed a $550,000 sUAS program, supervised up to five operators in day and night operations, executed the Rapid Airfield Damage Assessment System (RADAS) mission, and led the first Air Force unit to inspect installation roofs by unmanned aircraft. Currently quality control and project coordination on U.S. federal construction task orders in South Korea. BS Computer Science, University of Maryland Global Campus (2026). MS student, Information Technology (Systems Engineering concentration), UMGC. ORCID: 0009-0007-2898-8478.
+
+Public record: [Air Force RADAS article](https://www.af.mil/News/Article-Display/Article/1744946/) · [DVIDS roof-inspection image, 2 Nov 2020](https://www.dvidshub.net/image/6465027/)
 
 ## Collaboration and future funding
 
