@@ -19,6 +19,7 @@ Prepared 6 October 2026. Physical status has not been independently verified.
 | Water density | 1,000 kg/m³ | Estimate calculation basis | Freshwater assumption |
 | Base mass allowance | 0–30% | User-adjustable scenario | Sensitivity only |
 | Added mass | 0–200 kg | User-adjustable scenario | Sensitivity only; not load authorization |
+| Stability screen tiers | >100.4 kg reduced; >120.4 kg marginal; >140.4 kg unstable | GM table in estimate (KG = 450 mm, 400/440 mm spacing) | Sensitivity band, not measured |
 | Build progress | No completion percentage | Work sequence and reported Phase 1 focus | Latest completion unverified |
 
 ## Methods

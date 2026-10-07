@@ -1,5 +1,11 @@
 # Change log
 
+## 0.5 — 2026-10-07
+
+Quality pass after the v0.4 research-readiness release. Added a concept-of-operations graphic, a three-stage scale-path graphic, a drawing register for the V03 package, and a static draft/initial-stability chart from the 12 September 2026 hull estimate. Added a tiered stability screen to the explorer's load-case lab with matching tests. Recoloured the milestone roadmap to the HDES palette. Reduced README image weight (isometrics resized to 1600 px, animation re-encoded) and removed a duplicate isometric file. Normalized the remaining `.png.PNG` filename, archived superseded explanatory assets, removed the legacy Mermaid architecture sketch, and recorded the 24 V / 12 V electrical conflict as a reconciliation item.
+
+No prototype build, water-test result, control-software implementation, funding award, confirmed partner, payload figure, endurance figure, speed figure, or cost-performance result is claimed in this release.
+
 ## 0.4 — 2026-10-07
 
 Reframed the public project around U.S. inland-waterway research and supervised autonomy while preserving explicit limits on what has been built or demonstrated. Added research questions, acceptance criteria, staged testing, proposed control architecture, regulatory approach, funding-readiness checklist, one-page project brief, test-run data structure, citation metadata, HDES ownership language, and a three-stage scaling view. Updated team information for Jason Von Holmes and normalized image filenames ending in `.png.png` to `.png`.

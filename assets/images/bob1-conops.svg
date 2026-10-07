@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="t d">
+<title id="t">Bob 1 concept of operations</title>
+<desc id="d">Operator at a shore ground station plans a route and monitors telemetry over a radio link to Bob 1, which navigates waypoints under ArduPilot Rover. A separate RC manual-override path has priority. Proposed, not tested.</desc>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#595959"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff6600"/></marker>
+</defs>
+<rect width="1200" height="560" fill="#f5f5f5"/>
+<rect width="1200" height="92" fill="#2e2e2e"/>
+<g font-family="Facundo, Scandia, Arial, Helvetica, sans-serif">
+<text x="48" y="38" fill="#ff6600" font-size="14" letter-spacing="3">PISO-AID / BOB 1</text>
+<text x="48" y="70" fill="#ffffff" font-size="26" font-weight="700">Concept of operations · supervised autonomy</text>
+
+<!-- shore -->
+<rect x="48" y="140" width="330" height="300" rx="12" fill="#ffffff" stroke="#cccccc"/>
+<text x="68" y="172" fill="#2e2e2e" font-size="15" font-weight="700">SHORE · OPERATOR STATION</text>
+<rect x="68" y="192" width="290" height="92" rx="8" fill="#f5f5f5" stroke="#e0e0e0"/>
+<text x="84" y="218" fill="#2e2e2e" font-size="14" font-weight="700">Ground control station</text>
+<text x="84" y="240" fill="#595959" font-size="13">Mission Planner / QGroundControl</text>
+<text x="84" y="260" fill="#595959" font-size="13">Plan waypoints · monitor telemetry · log</text>
+<rect x="68" y="300" width="290" height="70" rx="8" fill="#f5f5f5" stroke="#e0e0e0"/>
+<text x="84" y="326" fill="#2e2e2e" font-size="14" font-weight="700">RC transmitter</text>
+<text x="84" y="348" fill="#595959" font-size="13">Manual override · kill switch · abort</text>
+<text x="68" y="404" fill="#595959" font-size="13">Operator and safety observer remain</text>
+<text x="68" y="424" fill="#595959" font-size="13">on shore or in a chase boat for every run.</text>
+
+<!-- vehicle -->
+<rect x="700" y="140" width="452" height="300" rx="12" fill="#ffffff" stroke="#cccccc"/>
+<text x="720" y="172" fill="#2e2e2e" font-size="15" font-weight="700">ON WATER · BOB 1 USV</text>
+<rect x="720" y="192" width="412" height="70" rx="8" fill="#fff0e6" stroke="#ff6600"/>
+<text x="736" y="218" fill="#2e2e2e" font-size="14" font-weight="700">Autopilot · Cube Orange+ / ArduPilot Rover (boat)</text>
+<text x="736" y="240" fill="#595959" font-size="13">Waypoint navigation · failsafes · dataflash logging</text>
+<rect x="720" y="276" width="196" height="64" rx="8" fill="#f5f5f5" stroke="#e0e0e0"/>
+<text x="736" y="300" fill="#2e2e2e" font-size="14" font-weight="700">Sensors</text>
+<text x="736" y="320" fill="#595959" font-size="13">GPS · compass · cameras</text>
+<rect x="936" y="276" width="196" height="64" rx="8" fill="#f5f5f5" stroke="#e0e0e0"/>
+<text x="952" y="300" fill="#2e2e2e" font-size="14" font-weight="700">Propulsion</text>
+<text x="952" y="320" fill="#595959" font-size="13">Motor · steering · power</text>
+<rect x="720" y="356" width="412" height="64" rx="8" fill="#f5f5f5" stroke="#e0e0e0"/>
+<text x="736" y="380" fill="#2e2e2e" font-size="14" font-weight="700">Preplanned route</text>
+<text x="736" y="400" fill="#595959" font-size="13">Bounded test area · permitted water · defined abort conditions</text>
+
+<!-- links -->
+<line x1="378" y1="226" x2="700" y2="226" stroke="#595959" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="539" y="190" fill="#2e2e2e" font-size="13" text-anchor="middle" font-weight="700">Telemetry radio link</text>
+<text x="539" y="206" fill="#595959" font-size="12" text-anchor="middle">commands · status · logs</text>
+<path d="M378 335H440V252H700" fill="none" stroke="#ff6600" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#ao)"/>
+<text x="575" y="300" fill="#ff6600" font-size="13" text-anchor="middle" font-weight="700">RC manual override · priority path</text>
+<text x="575" y="318" fill="#595959" font-size="12" text-anchor="middle">telemetry loss → stop / hold failsafe</text>
+
+<!-- evidence -->
+<rect x="48" y="462" width="1104" height="56" rx="8" fill="#ffffff" stroke="#cccccc"/>
+<text x="68" y="486" fill="#2e2e2e" font-size="14" font-weight="700">Evidence from every run</text>
+<text x="68" y="506" fill="#595959" font-size="13">GPS track · battery data · operator-intervention log · ArduPilot dataflash log · run notes → data/runs/YYYY-MM-DD-run-NN/</text>
+
+<text x="48" y="546" fill="#595959" font-size="12">PROPOSED OPERATING CONCEPT · Not yet integrated or tested. Full-scale vessels are envisioned as crewed platforms with supervised autonomy.</text>
+</g>
+</svg>
