@@ -1,5 +1,9 @@
 # Change log
 
+## 2026-10-09 — Systems engineering documentation audit
+
+Added a public assessment of the 12-document engineering checklist, source scope, gaps and priorities. Created a private working Google Sheets document tree, evidence register and draft RTM with 34 candidate requirements and proposed tests. The public summary distinguishes partial records from approved baselines and identifies regulatory applicability as open. No requirement approval, build release, certification or successful test is claimed.
+
 ## 0.5.1 — 2026-10-07
 
 Added a Phase 1 budget (bare hull, weigh and float) with estimate-vs-actual columns and a CSV for actuals, based on Korean retail listings read on 7 October 2026. Recorded that the priced 60 L drum (325/400 × 610 mm) differs from the 360 mm ideal cylinder assumed in the hull estimate. No purchase, quotation or funding is claimed.

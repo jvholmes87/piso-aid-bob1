@@ -115,6 +115,10 @@ See the [funding overview](docs/funding-overview.md), [one-page project brief](d
 
 Contact [Jason on GitHub](https://github.com/jvholmes87) or open a general inquiry using this repository's issue template. For a deeper technical discussion, a separate private review package is available by arrangement with the project lead.
 
+## Systems engineering documentation
+
+The [12-document audit and gap assessment](docs/se-documentation-status.md) records partial coverage in seven areas, four deliverables not located, and a newly created draft RTM with 34 candidate requirements. Requirements approval, test evidence and certification remain outstanding.
+
 ## Documentation and rights
 
 HDES is the owning entity for the project; U.S. LLC formation is in progress. This public repository presents project intent, development status and plans. Detailed source records are maintained separately.
