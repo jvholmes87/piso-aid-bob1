@@ -73,7 +73,7 @@ Summary of the 12 September 2026 preliminary capacity estimate (calculation revi
 
 ## Research questions
 
-The planned [BOB 1 Water Lab](docs/water-lab/README.md) now has a Phase 1 software baseline: sourced vessel parameters, explicit unknowns, and a tested ideal-cylinder flotation module. The procedural water environment and movable-ballast simulation are later phases; this baseline does not establish measured vessel behavior.
+The [BOB 1 Water Lab](https://jvholmes87.github.io/piso-aid-bob1/water-lab/) adds a procedural water scene, lighting, orbit/touch controls, hull/complete-craft views and optional synthesized ambience. It uses the shared Phase 1 vessel baseline and ideal-cylinder level draft, with a Canvas fallback when WebGL 2 is unavailable. Movable ballast and dynamic vessel behavior are later phases; no measured performance is implied. [Methods and verification limits](docs/water-lab/README.md).
 
 The project is organized around measurable technical uncertainties in navigation, operator intervention, payload economics, and evidence-quality telemetry.
 
