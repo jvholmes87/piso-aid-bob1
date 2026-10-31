@@ -1,5 +1,9 @@
 # Change log
 
+## 2026-11-01 — Water Lab Phase 1 foundation
+
+Added a provisional, source-linked SI vessel baseline, browser/Node hydrostatics module, phase-linked gap register and six-phase delivery plan. Unknown physical quantities remain null; CAD masses and schematic geometry retain their evidence labels. Checks reproduce the existing level-flotation calculator and exercise independent boundary, scaling and force-balance cases. This is software foundation work; no new ocean UI, physical validation, propulsion model or hardware integration is claimed.
+
 ## 2026-10-09 — Systems engineering documentation audit
 
 Added a public assessment of the 12-document engineering checklist, source scope, gaps and priorities. Created a private working Google Sheets document tree, evidence register and draft RTM with 34 candidate requirements and proposed tests. The public summary distinguishes partial records from approved baselines and identifies regulatory applicability as open. No requirement approval, build release, certification or successful test is claimed.

@@ -73,6 +73,8 @@ Summary of the 12 September 2026 preliminary capacity estimate (calculation revi
 
 ## Research questions
 
+The planned [BOB 1 Water Lab](docs/water-lab/README.md) now has a Phase 1 software baseline: sourced vessel parameters, explicit unknowns, and a tested ideal-cylinder flotation module. The procedural water environment and movable-ballast simulation are later phases; this baseline does not establish measured vessel behavior.
+
 The project is organized around measurable technical uncertainties in navigation, operator intervention, payload economics, and evidence-quality telemetry.
 
 Read [Research questions](docs/research-questions.md), [Acceptance criteria](docs/acceptance-criteria.md), [Test plan](docs/test-plan.md), and [Proposed control architecture](docs/control-architecture.md).
