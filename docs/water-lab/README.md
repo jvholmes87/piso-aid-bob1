@@ -1,6 +1,19 @@
-# BOB 1 Water Lab — Phase 1
+# BOB 1 Water Lab — Phase 2
 
-Phase 1 establishes a reusable, provisional vessel configuration and a tested hydrostatics module for the planned browser water lab. The interactive ocean environment begins in Phase 2; no water-lab UI is published by this baseline.
+The [Water Lab](./) adds a procedural water/sky scene and orbitable BOB geometry to the Phase 1 vessel baseline. It is a visual prototype: vessel height uses the level-flotation calculation, while surface ripples and reflections do not apply physical wave forces.
+
+## Run and controls
+
+GitHub Pages serves this folder at `/water-lab/`. For a local copy, serve `docs/` over HTTP and open `/water-lab/`; loading `index.html` directly with `file://` will not load the JSON baseline.
+
+- Drag or use arrow keys to orbit. Scroll, pinch, +/− or the zoom buttons change distance. Home or the reset button restores the view.
+- Switch between bare hull and the complete-craft concept. Both use the CAD mass in the shared JSON; no new mass estimates are invented.
+- Choose daylight, golden hour or overcast; adjust visual surface detail; pause motion or enable camera orbit.
+- WebGL 2 provides shader water, reflections and sky. If unavailable or initialization fails, the scene switches to a Canvas renderer with procedural water texture and projected vessel geometry.
+- Graphics Auto reduces pixel density on small viewports; Reduced and High allow explicit selection. Canvas animation is capped at 30 redraws per second. Animation pauses on hidden tabs, and reduced-motion preference pauses it initially.
+- Ambience is synthesized noise filtered through a spatial audio source, starts only after a click, and suspends when motion is paused or the tab is hidden. No microphone, imported audio, pre-made model, texture, CDN or package runtime is used. The official HDES logo is reused unchanged.
+
+The Phase 2 complete-craft display is a simplified equipment concept, not the explorer's full 30-row BOM representation. Geometry remains schematic. The source-backed readouts do not imply a physical build or a safe load rating.
 
 ## Included
 
@@ -8,11 +21,13 @@ Phase 1 establishes a reusable, provisional vessel configuration and a tested hy
 - [Hydrostatics module](model/hydrostatics.js): level flotation of ideal horizontal cylinders, total-mass scenarios and strict input checks. Runs in Node or a browser without dependencies.
 - [Phase plan](PHASES.md): deliverables and the decisions needed as each phase begins.
 - [Model checks](tests/model.cjs): independent boundary/scaling tests and comparison with the existing explorer.
+- [Scene checks](tests/scene.cjs): camera transforms, finite geometry/normals and resource resolution.
 
 Run from the repository root:
 
 ```sh
 node docs/water-lab/tests/model.cjs
+node docs/water-lab/tests/scene.cjs
 node docs/visual-explorer/tests/check.cjs
 ```
 
@@ -42,4 +57,8 @@ The source explorer uses 480 mm display row spacing, while the estimate examines
 
 Phase 1 is complete as a **software foundation**, not an approved physical build baseline. It does not solve heel/trim, dynamic roll/pitch, righting arms, structural loads, drag, propulsion, energy use or autopilot behavior. `drumCrownClearance` is clearance to the ideal drum crown, not deck freeboard; `fullImmersionMass` is not payload capacity. Unknown CG, inertia and payload remain null.
 
-Next: Phase 2 adds a procedural water scene using this baseline's coordinate system and dimensions. Phase 3 adds positioned ballast and approximate hydrostatic equilibrium, with visible assumptions and comparison against future physical observations. The existing [Visual Explorer](../visual-explorer/) remains the current public interactive tool.
+Next: Phase 3 adds positioned ballast and approximate hydrostatic equilibrium, with visible assumptions and comparison against future physical observations. The [Visual Explorer](../visual-explorer/) remains available for component inspection and its original load calculator.
+
+## Verification record — 1 November 2026
+
+Node checks pass for the model, scene geometry/camera math and existing explorer. Browser QA exercised the Canvas fallback, configuration and unit changes, atmosphere and pause controls. The cloud browser does not expose WebGL 2, so GPU shader compilation/rendering is **not verified here**. Responsive CSS and touch handlers are included; physical Android performance and pinch behavior remain to be checked. Phase 2 should not be described as validated on all devices.

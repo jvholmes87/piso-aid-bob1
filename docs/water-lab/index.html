@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182326">
+  <meta name="description" content="Explore BOB 1 in a procedural water environment. A browser-based HDES vessel research visualization.">
+  <title>BOB 1 Water Lab · HDES</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="model/hydrostatics.js" defer></script>
+  <script src="assets/scene-core.js" defer></script>
+  <script src="assets/renderer.js" defer></script>
+  <script src="assets/canvas-renderer.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#controls">Skip to scene controls</a>
+  <header class="masthead">
+    <a class="brand" href="../visual-explorer/" aria-label="HDES BOB 1 visual explorer"><img src="../visual-explorer/assets/hdes-logo.svg" alt="Holmes Dynamic Engineered Systems" width="184" height="48"></a>
+    <nav aria-label="Project navigation"><a href="../visual-explorer/">Visual explorer <span aria-hidden="true">↗</span></a><a href="https://github.com/jvholmes87/piso-aid-bob1/tree/main/docs/water-lab">Source &amp; methods <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div><p class="eyebrow"><span></span> HDES / EXPERIMENTAL VESSEL PROGRAM</p><h1 id="title">BOB 1 <span>Water Lab.</span></h1><p class="dek">A small vessel. A new perspective.</p></div>
+      <div class="phase"><span class="phase-number">02 <small>/ 06</small></span><span>PROCEDURAL ENVIRONMENT<br><strong>Visual prototype</strong></span></div>
+    </section>
+    <div class="lab-layout">
+      <section class="viewport" aria-label="Interactive BOB 1 water scene">
+        <canvas id="scene" tabindex="0" aria-label="BOB 1 water scene. Drag to orbit, pinch or scroll to zoom. Arrow keys rotate; plus and minus zoom; Home resets." aria-describedby="sceneHelp"></canvas>
+        <div class="scene-top"><span class="scene-tag"><i></i> ILLUSTRATIVE BASIN</span><span id="renderStatus" class="render-status" role="status">Preparing scene…</span></div>
+        <div id="fallback" class="fallback" hidden><p class="eyebrow">SCENE UNAVAILABLE</p><h2>Let’s keep exploring.</h2><p id="errorMessage">This browser could not start the 3D water scene.</p><a href="../visual-explorer/">Open the visual explorer →</a><button id="retry" type="button">Try again</button></div>
+        <div class="scene-bottom"><div><span class="crosshair" aria-hidden="true">＋</span><strong id="sceneConfiguration">BARE HULL</strong><span>BOB 1 · SCHEMATIC GEOMETRY</span></div><div class="camera-tools" aria-label="Camera tools"><button id="zoomIn" title="Zoom in" aria-label="Zoom in">+</button><button id="zoomOut" title="Zoom out" aria-label="Zoom out">−</button><button id="resetCamera" title="Reset camera" aria-label="Reset camera">↺</button></div></div>
+        <div class="orientation" aria-hidden="true"><span>MODEL AXES</span><b>X <i>↗</i> Y</b></div>
+      </section>
+      <aside id="controls" class="controls" aria-labelledby="controlsTitle">
+        <div class="panel-heading"><span class="eyebrow">SET THE SCENE</span><h2 id="controlsTitle">An open-water workspace.</h2></div>
+        <label class="field" for="configuration">Vessel configuration<select id="configuration"><option value="bareHull">Bare hull</option><option value="completeCraft">Complete craft concept</option></select></label>
+        <label class="field" for="lighting">Light &amp; atmosphere<select id="lighting"><option value="day">Clear daylight</option><option value="golden">Golden hour</option><option value="overcast">Soft overcast</option></select></label>
+        <label class="field" for="surface"><span class="field-row">Surface detail <output id="surfaceValue" for="surface">35%</output></span><input id="surface" type="range" min="0" max="100" value="35"><small>Visual ripples. No wave forces applied.</small></label>
+        <div class="toggle-row"><span>Motion</span><button id="motion" class="toggle" type="button" aria-pressed="true">Playing <span aria-hidden="true">Ⅱ</span></button></div>
+        <div class="toggle-row"><span>Camera orbit</span><button id="orbit" class="toggle" type="button" aria-pressed="false">Off</button></div>
+        <div class="toggle-row"><span>Water ambience</span><button id="sound" class="toggle" type="button" aria-pressed="false">Off</button></div>
+        <div class="select-pair"><label class="field" for="units">Units<select id="units"><option value="both">Metric + US</option><option value="metric">Metric</option><option value="imperial">US customary</option></select></label><label class="field" for="quality">Graphics<select id="quality"><option value="auto">Auto</option><option value="low">Reduced</option><option value="high">High</option></select></label></div>
+        <p id="sceneHelp" class="help">Drag to orbit · Scroll or pinch to zoom<br>Keyboard: arrows, + / −, Home</p>
+        <p id="soundStatus" class="sr-only" role="status"></p>
+      </aside>
+    </div>
+    <section class="readouts" aria-label="Vessel reference values"><div><span>DECK FOOTPRINT <em>DRAWING</em></span><strong id="deckValue">—</strong></div><div><span>BASE MASS <em>CAD</em></span><strong id="massValue">—</strong></div><div><span>LEVEL DRAFT <em>CALCULATED</em></span><strong id="draftValue">—</strong></div><div><span>FLOTATION <em>NOMINAL</em></span><strong id="drumValue">4 × 60 L</strong></div></section>
+    <section class="notes" aria-label="Model basis"><div><p class="eyebrow">UNDERSTAND THE MODEL</p><h2>A view into the build.</h2><p>This scene uses BOB 1’s drawing-based dimensions and ideal-cylinder flotation model. Vessel position uses calculated level draft. Ripples, reflections, and sound are procedural visual effects; they do not predict handling in waves.</p></div><div class="note-list"><p><b>Documented, assumed, measured.</b><br>Mass is a CAD estimate. Drum shape, spacing, and equipment heights remain provisional. No measured performance is shown.</p><p><b>Next: the loading lab.</b><br>Movable ballast, heel, and trim arrive in Phase 3. Powered motion and fault scenarios follow later.</p><a href="model/bob1-baseline.json">View the vessel baseline →</a></div></section>
+  </main>
+  <footer><span>HDES · BOB 1 RESEARCH</span><span>Procedural geometry · Water shaders · Synthesized audio</span><a href="PHASES.md">Six-phase roadmap ↗</a></footer>
+  <noscript><p class="no-script">Enable JavaScript to explore the water scene, or <a href="README.md">read the model documentation</a>.</p></noscript>
+</body>
+</html>
