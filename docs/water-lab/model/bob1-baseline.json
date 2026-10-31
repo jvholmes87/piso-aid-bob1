@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "bob1-water-lab-baseline-v0.1",
+  "date": "2026-11-01",
+  "status": "provisional-simulation-baseline",
+  "sourceCommit": "36887f7872fdd9dd1572d1ae74ba2e76b4ed076c",
+  "units": "SI",
+  "coordinates": {
+    "origin": "Deck plan center in x/y; lowest point of ideal drums at z=0",
+    "x": "Positive toward drawing X=1500 (mechanical motor end)",
+    "y": "Positive toward drawing Y=800; port/starboard not assigned",
+    "z": "Positive upward",
+    "drawingToModel": "x=(X_mm-750)/1000, y=(Y_mm-400)/1000",
+    "note": "These display coordinates do not establish verified support locations."
+  },
+  "sources": {
+    "estimate": {
+      "title": "Bob 1 hull: preliminary capacity estimate, revision 0",
+      "date": "2026-09-12",
+      "locator": "Bob1_Hull_Structural_and_Flotation_Estimate.pdf",
+      "review": "Preliminary analysis; geometry assumptions and mass estimates are unmeasured."
+    },
+    "register": {
+      "title": "Visual Explorer v0.3 source register",
+      "locator": "../../visual-explorer/SOURCE_REGISTER.md",
+      "review": "Drawing values summarized here; native CAD not revalidated."
+    },
+    "explorer": {
+      "title": "Visual Explorer v0.3 schematic implementation",
+      "locator": "../../visual-explorer/assets/app.js",
+      "review": "Display dimensions and positions are illustrative unless separately sourced."
+    },
+    "audit": {
+      "title": "Systems engineering documentation audit",
+      "date": "2026-10-09",
+      "locator": "../../se-documentation-status.md",
+      "review": "Records unresolved configuration and test-evidence gaps."
+    },
+    "budget": {
+      "title": "Bare hull, weigh and float budget",
+      "date": "2026-10-07",
+      "locator": "../../phase1-budget.md",
+      "review": "Priced retail drums differ from the ideal-cylinder model."
+    }
+  },
+  "parameters": {
+    "deckLength": {"value": 1.5, "unit": "m", "evidence": "documented", "sources": ["register"], "note": "Drawing 0004; not an as-built measurement."},
+    "deckWidth": {"value": 0.8, "unit": "m", "evidence": "documented", "sources": ["register"], "note": "Drawing 0004."},
+    "deckThickness": {"value": 0.009, "unit": "m", "evidence": "documented", "sources": ["register"], "note": "Drawing 0004."},
+    "drumCount": {"value": 4, "unit": "count", "evidence": "documented", "sources": ["register"], "note": "Drawing 0002; two-by-two arrangement."},
+    "nominalDrumVolume": {"value": 0.06, "unit": "m3", "evidence": "documented", "sources": ["register"], "note": "Nominal internal container capacity; proxy only for displaced exterior volume."},
+    "idealDrumRadius": {"value": 0.18, "unit": "m", "evidence": "assumed", "sources": ["estimate"], "note": "Equivalent horizontal cylinder; not verified drum geometry."},
+    "waterDensity": {"value": 1000, "unit": "kg/m3", "evidence": "assumed", "sources": ["estimate"], "note": "Freshwater scenario, not a measured site condition."},
+    "bareHullMass": {"value": 49.28, "unit": "kg", "evidence": "modeled", "sources": ["estimate"], "note": "Drawing 0002 CAD mass; not weighed."},
+    "completeCraftMass": {"value": 80.4, "unit": "kg", "evidence": "modeled", "sources": ["estimate"], "note": "Drawing 0001 CAD mass; includes equipment. Do not add component masses again."},
+    "drumCentersXY": {"value": [[-0.39, -0.24], [-0.39, 0.24], [0.39, -0.24], [0.39, 0.24]], "unit": "m", "evidence": "assumed", "sources": ["explorer"], "note": "Display placement only. Not the 400/440 mm row-spacing sensitivity cases in the estimate."},
+    "schematicDeckBottomZ": {"value": 0.505, "unit": "m", "evidence": "assumed", "sources": ["explorer"], "note": "Display stack-up; cannot establish measured deck freeboard."},
+    "externalDrumVolume": {"value": null, "unit": "m3", "evidence": "unknown", "sources": ["estimate", "budget"], "note": "Measure selected drum exterior profile and sealed displacement."},
+    "bareHullCenterOfGravity": {"value": null, "unit": "m", "evidence": "unknown", "sources": ["estimate"], "note": "Three coordinates required before predicting loaded heel/trim."},
+    "completeCraftCenterOfGravity": {"value": null, "unit": "m", "evidence": "unknown", "sources": ["estimate"], "note": "Three coordinates; requires equipment masses and mounting heights."},
+    "yawInertia": {"value": null, "unit": "kg*m2", "evidence": "unknown", "sources": ["estimate"], "note": "Needed for calibrated powered dynamics; not inferred from gross mass."},
+    "approvedPayload": {"value": null, "unit": "kg", "evidence": "unknown", "sources": ["estimate"], "note": "No approved payload rating is established by this model."}
+  },
+  "gaps": [
+    {"id": "WL-001", "phases": [1, 3], "topic": "Actual drum profile and exterior displacement", "status": "open", "action": "Measure the chosen drums and replace the ideal-cylinder proxy.", "sources": ["budget", "estimate"]},
+    {"id": "WL-002", "phases": [1, 3], "topic": "Drum spacing and vertical stack-up", "status": "open", "action": "Verify native CAD or drawing geometry; retain display coordinates as assumptions until then.", "sources": ["register", "explorer"]},
+    {"id": "WL-003", "phases": [3], "topic": "As-built masses and centers of gravity", "status": "open", "action": "Weigh the assembly/components and establish loaded CG. Until then label movable-load scenarios approximate.", "sources": ["estimate"]},
+    {"id": "WL-004", "phases": [3], "topic": "Frame, connections and loading limits", "status": "open", "action": "Obtain reviewed load limits; displacement calculations never authorize test payloads.", "sources": ["estimate", "audit"]},
+    {"id": "WL-005", "phases": [4, 5], "topic": "Hydrodynamic response", "status": "open", "action": "Begin with labeled scenario coefficients; calibrate drag, damping and response against controlled tests.", "sources": ["audit"]},
+    {"id": "WL-006", "phases": [5], "topic": "Motor/steering and 12 V versus 24 V configuration", "status": "open", "action": "Select a consistent propulsion and power configuration before claiming powered fidelity.", "sources": ["audit", "register"]},
+    {"id": "WL-007", "phases": [5], "topic": "Thrust, energy and battery limits", "status": "open", "action": "Measure thrust/current maps and usable energy; voltage and amp-hours alone do not establish endurance.", "sources": ["audit"]},
+    {"id": "WL-008", "phases": [6], "topic": "Communications and fallback policy", "status": "open", "action": "Distinguish shore-link, local-bus and positioning failures; define available control and recovery actions.", "sources": ["audit"]},
+    {"id": "WL-009", "phases": [6], "topic": "Connected module arrangement", "status": "open", "action": "Choose rigid, articulated or separate vessels and identify powered/passive modules before modeling a convoy.", "sources": ["audit"]}
+  ],
+  "limits": [
+    "This is a provisional simulation baseline, not a fabrication release or measured vessel model.",
+    "The Phase 1 calculation is level-trim, equal-loading hydrostatics for ideal horizontal cylinders.",
+    "Drum crown clearance is not deck freeboard. Full-immersion displacement is not a payload rating.",
+    "Center-of-gravity, roll/trim equilibrium, righting arms, structure and damaged flotation are not solved here.",
+    "Wave rendering, propulsion, autonomy and hardware integration belong to later phases."
+  ]
+}
