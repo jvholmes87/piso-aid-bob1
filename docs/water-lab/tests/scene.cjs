@@ -33,4 +33,4 @@ const app=fs.readFileSync(path.join(root,'assets/app.js'),'utf8');
 assert.match(app,/BobHydrostatics\.resolveModel/);assert.match(app,/scenarioMass/);
 assert.match(app,/document\.hidden/);assert.match(app,/prefers-reduced-motion/);
 assert.ok(!/Audio\(['"]|\.mp3|\.wav|\.glb|\.gltf/.test(app));
-console.log('PASS: camera target/orthogonality across 108 views; finite triangle geometry and normals; all local resources resolve; shared baseline and motion lifecycle hooks. Shader rendering and layout require browser checks.');
+console.log('PASS: camera target/orthogonality across 36 views; finite triangle geometry and normals; all local resources resolve; shared baseline and motion lifecycle hooks. Shader rendering and layout require browser checks.');

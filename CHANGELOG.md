@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-11-01 — Public BOB 1 walkthrough
+
+Linked Jason's [YouTube walkthrough](https://youtu.be/t5QHTm9MyZM) and [X update](https://x.com/jasonvonholmes/status/2116818255210020981) from the project documentation and added a dated publication record. Verified the public video title/author and visible X excerpt through their first-party metadata endpoints. Full published playback, thumbnail appearance and audience metrics were not independently checked. The walkthrough remains a software development demonstration; the deck/frame alignment issue is recorded as open.
+
+## 2026-11-01 — Water Lab progress record
+
+Archived three original Phase 2 Canvas screenshots with captions, source commit, verification notes and an image-integrity manifest. Added a phase-by-phase progress index and local contributor instructions to continue the visual record. Software screenshots are explicitly separated from physical-build photographs and measured test evidence.
+
 ## 2026-11-01 — Water Lab Phase 2 visual environment
 
 Added a procedural water/sky scene, source-based BOB geometry, three lighting modes, orbit/zoom controls, dual units, graphics presets and optional synthesized spatial ambience. The scene uses the shared vessel baseline and calculated level draft. A Canvas fallback keeps the lab usable without WebGL 2; its configuration, lighting, units and pause controls were checked in-browser. GPU shader rendering and physical Android checks remain open. Added scene geometry/camera tests and navigation from the explorer. Wave forces, ballast, heel/trim and powered behavior remain later-phase work.
