@@ -2,6 +2,12 @@
 
 The [Water Lab](./) adds a procedural water/sky scene and orbitable BOB geometry to the Phase 1 vessel baseline. It is a visual prototype: vessel height uses the level-flotation calculation, while surface ripples and reflections do not apply physical wave forces.
 
+See the [visual progress record](progress/README.md) for dated screenshots, source commits, checks, limitations and the record-keeping workflow. The [Phase 2 record](progress/2026-11-01/README.md) contains the first three captures.
+
+## Recorded walkthrough
+
+Jason's [YouTube walkthrough](https://youtu.be/t5QHTm9MyZM) introduces the project, Visual Explorer and Water Lab. The [X update](https://x.com/jasonvonholmes/status/2116818255210020981) shares the development progress. The [publication record](progress/2026-11-01/publication.md) records the public metadata checked and the known deck/frame alignment issue.
+
 ## Run and controls
 
 GitHub Pages serves this folder at `/water-lab/`. For a local copy, serve `docs/` over HTTP and open `/water-lab/`; loading `index.html` directly with `file://` will not load the JSON baseline.

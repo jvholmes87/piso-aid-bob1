@@ -6,7 +6,7 @@
 **Owning entity:** HDES (U.S. LLC formation in progress)  
 **Project lead:** Jason Von Holmes  
 **Status:** Design development and prototype planning  
-**Updated:** 7 October 2026 (v0.5)
+**Updated:** 1 November 2026 (Water Lab Phase 2)
 
 ## The problem
 
@@ -50,6 +50,12 @@ The owner-approved **Visual Explorer v0.3** adds a rotatable assembled/exploded 
 **Run it:** [Open the hosted BOB 1 Visual Explorer](https://jvholmes87.github.io/piso-aid-bob1/visual-explorer/). It runs directly in your browser through this repository's GitHub Pages site. [Source and instructions](docs/visual-explorer/README.md) · [Calculation and source basis](docs/visual-explorer/SOURCE_REGISTER.md). The single-file HTML remains available for optional offline use.
 
 The assembly remains schematic; small hardware is grouped and enclosure internals are not individually modeled. The calculator does not establish safe payload or stability. Exact Facundo/Scandia webfonts and real-browser layout verification remain outstanding.
+
+## Project walkthrough
+
+[Watch Jason's BOB 1 walkthrough on YouTube](https://youtu.be/t5QHTm9MyZM): project goals, the Visual Explorer and the Water Lab under development. The [X post](https://x.com/jasonvonholmes/status/2116818255210020981) shares the same development update.
+
+See the [publication record](docs/water-lab/progress/2026-11-01/publication.md) for verified public metadata and the scope of this software demonstration. The visible deck/frame alignment issue remains an open visualization item.
 
 ## Design visuals
 
