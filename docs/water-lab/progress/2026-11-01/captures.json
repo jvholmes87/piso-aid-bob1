@@ -1,0 +1,50 @@
+{
+  "recordDate": "2026-11-01",
+  "dateBasis": "User-facing client date in Asia/Seoul; no exact capture clock is asserted.",
+  "phase": 2,
+  "sourceCommit": "798f6042b2c9baf085f711c27c3151e0e135d785",
+  "sourceBranch": "water-lab/phase-2-environment",
+  "sourcePR": "https://github.com/jvholmes87/piso-aid-bob1/pull/6",
+  "captureEnvironment": "Cloud Chrome desktop preview; WebGL 2 unavailable; Canvas fallback.",
+  "status": "Phase 2 candidate; not merged at recording.",
+  "captures": [
+    {
+      "file": "phase-02-complete-craft-golden.jpg",
+      "caption": "Complete-craft concept, golden-hour lighting; motion paused.",
+      "kind": "software-screenshot",
+      "renderMode": "canvas-fallback",
+      "dimensionsPx": [
+        1348,
+        926
+      ],
+      "sha256": "4bd56dc73d7529322b8f2cff40cb11aafa12aa297c3d2f4d33fd4e263ac2fa6c"
+    },
+    {
+      "file": "phase-02-bare-hull-daylight.jpg",
+      "caption": "Bare-hull concept, daylight; motion paused.",
+      "kind": "software-screenshot",
+      "renderMode": "canvas-fallback",
+      "dimensionsPx": [
+        1348,
+        926
+      ],
+      "sha256": "3e68bfea3ab1d6ee2d198f8f9ad635a2d41cf2e282f738240034dbc6c5ce83be"
+    },
+    {
+      "file": "phase-02-reference-readouts.jpg",
+      "caption": "Bare-hull reference panel: 49.28 kg CAD mass and approximately 93 mm calculated level draft.",
+      "kind": "software-screenshot",
+      "renderMode": "canvas-fallback",
+      "dimensionsPx": [
+        1348,
+        926
+      ],
+      "sha256": "a46b4e8b0f52b2fb3f378b7833ac68bedd93281d4ac006ebdf8de2793de74293"
+    }
+  ],
+  "verificationLimits": [
+    "Screenshots show software behavior and interface only.",
+    "GPU shader rendering and physical Android/pinch testing remain open.",
+    "No physical BOB prototype or measured vessel performance is depicted."
+  ]
+}
