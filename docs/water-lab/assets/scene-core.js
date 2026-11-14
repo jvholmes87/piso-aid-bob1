@@ -50,13 +50,16 @@
       }
     }
     const radius=p.idealDrumRadius.value,length=p.nominalDrumVolume.value/(Math.PI*radius*radius),deck=p.schematicDeckBottomZ.value;
+    // Schematic visual contact: frame upper faces meet deck underside.
+    // This is NOT a verified frame elevation, member schedule, or fabrication datum.
+    const frameDepth=.02,frameBase=deck-frameDepth;
     for(const [x,z]of p.drumCentersXY.value){
       cylinderX(x,radius,z,radius,length,color.drum);
       for(const offset of [-.16,.16])cylinderX(x+offset,radius,z,radius+.003,.014,color.strap);
     }
-    for(const z of [-.38,.38])box(0,.38,z,p.deckLength.value,.02,.02,color.frame);
-    for(const x of [-.74,-.39,0,.39,.74])box(x,.38,0,.02,.02,.78,color.frame);
-    box(.74,.38,0,.04,.12,.8,color.frame);
+    for(const z of [-.38,.38])box(0,frameBase,z,p.deckLength.value,frameDepth,.02,color.frame);
+    for(const x of [-.74,-.39,0,.39,.74])box(x,frameBase,0,.02,frameDepth,.78,color.frame);
+    box(.74,deck-.12,0,.04,.12,.8,color.frame);
     box(0,deck,0,p.deckLength.value,p.deckThickness.value,p.deckWidth.value,color.wood);
     // Thin seams are surface detailing, not a change to the plywood construction.
     for(let i=-3;i<=3;i++)box(0,deck+.0091,i*.1,1.49,.0004,.001,[.34,.24,.16]);
