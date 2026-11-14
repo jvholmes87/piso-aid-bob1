@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bob 1 — Three.js isolated comparison pilot (not deployed)</title>
+<style>
+:root{font-family:Arial,sans-serif;color:#ededed;background:#1c2224}body{margin:0}header{background:#2e2e2e;padding:12px 20px;border-bottom:3px solid #ff6600}h1{font-size:1.15rem;margin:0 0 5px}p{margin:6px 0;font-size:.9rem;line-height:1.4}.controls{padding:10px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}button{background:#ff6600;color:#151515;border:0;padding:10px 15px;font-weight:bold;border-radius:4px;cursor:pointer}button:focus-visible{outline:3px solid white}main{height:min(68vh,620px);min-height:320px}canvas{display:block;touch-action:none}.notes{padding:10px 20px;color:#ccc;font-size:.85rem}
+</style></head><body>
+<header><h1>BOB 1 | 3D comparison sandbox</h1><p>Provisional schematic geometry • not a CAD import, dynamic simulation, or measured vessel • no production integration</p></header>
+<div class="controls"><button id="assembly">Explode assembly</button><button id="configuration">Show complete-craft concept</button><button id="reset">Reset view</button><span id="status" role="status" aria-live="polite">Bare hull — assembled</span></div>
+<main id="scene" aria-label="Three-dimensional schematic boat model"></main>
+<p class="notes">Only the concept geometry and basic controls are compared. Four idealized 60 L cylinders; deck 1.5 × 0.8 × 0.009 m; drum positions and heights are illustrative. Use pointer drag to orbit, wheel/pinch to zoom. UI outside the canvas provides accessible toggles.</p>
+<script type="module">
+import * as THREE from 'https://esm.sh/three@0.170.0';
+import {OrbitControls} from 'https://esm.sh/three@0.170.0/examples/jsm/controls/OrbitControls.js';
+const root=document.querySelector('#scene');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.5));
+renderer.setSize(root.clientWidth,root.clientHeight);
+renderer.setClearColor(0xdde9ea);
+root.appendChild(renderer.domElement);
+const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(45,root.clientWidth/root.clientHeight,.05,100);
+camera.position.set(2.2,1.55,2.5);const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,.23,0);controls.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xffffff,0x637276,2));
+const sun=new THREE.DirectionalLight(0xffffff,2);sun.position.set(2,5,3);scene.add(sun);
+const mat=(c)=>new THREE.MeshStandardMaterial({color:c,metalness:c===0x69757a?.55:.08,roughness:.57});
+const blue=mat(0x32505c),steel=mat(0x69757a),orange=mat(0xff6600),wood=mat(0xa8784a),black=mat(0x323739);
+const objects=[],group=new THREE.Group();scene.add(group);
+function addBox(name,x,y,z,w,h,d,m,offset=0){const obj=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);obj.position.set(x,y,z);obj.userData={name,base:obj.position.clone(),offset};group.add(obj);objects.push(obj);return obj;}
+function addDrum(x,z){const cylinder=new THREE.Mesh(new THREE.CylinderGeometry(.18,.18,.06/(Math.PI*.18*.18),32),blue);cylinder.rotation.z=Math.PI/2;cylinder.position.set(x,.18,z);cylinder.userData={name:'Idealized drum',base:cylinder.position.clone(),offset:0};group.add(cylinder);objects.push(cylinder);}
+for(const x of [-.39,.39])for(const z of [-.24,.24])addDrum(x,z);
+const deckBottom=.505,railBase=deckBottom-.02;
+for(const z of [-.38,.38])addBox('longitudinal rail',0,railBase+.01,z,1.5,.02,.02,steel,.06);
+for(const x of [-.74,-.39,0,.39,.74])addBox('transverse rail',x,railBase+.01,0,.02,.02,.78,steel,.06);
+addBox('deck',0,deckBottom+.0045,0,1.5,.009,.8,wood,.28);
+const equipped=[
+addBox('battery housing',-.10,deckBottom+.13,0,.42,.25,.28,black,.55),
+addBox('control housing',.30,deckBottom+.07,0,.24,.12,.16,orange,.55),
+addBox('illustrative mast',.55,deckBottom+.38,0,.02,.76,.02,steel,.8)
+];
+let complete=false,exploded=false;
+function apply(){for(const o of objects){const hide=equipped.includes(o)&&!complete;o.visible=!hide;o.position.copy(o.userData.base);if(exploded)o.position.y+=o.userData.offset;}document.querySelector('#status').textContent=(complete?'Complete craft':'Bare hull')+' — '+(exploded?'exploded':'assembled');}
+document.querySelector('#assembly').onclick=()=>{exploded=!exploded;document.querySelector('#assembly').textContent=exploded?'Assemble':'Explode assembly';apply();};
+document.querySelector('#configuration').onclick=()=>{complete=!complete;document.querySelector('#configuration').textContent=complete?'Show bare hull':'Show complete-craft concept';apply();};
+document.querySelector('#reset').onclick=()=>{camera.position.set(2.2,1.55,2.5);controls.target.set(0,.23,0);controls.update();};
+const resize=new ResizeObserver(()=>{const w=root.clientWidth,h=root.clientHeight;if(w&&h){renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}});resize.observe(root);
+apply();function animate(){controls.update();renderer.render(scene,camera);requestAnimationFrame(animate);}animate();
+</script></body></html>
