@@ -23,6 +23,13 @@ for(const complete of [false,true]){
   const ys=Array.from(geometry).filter((_,i)=>i%9===1);near(Math.min(...ys),-.003);assert.ok(Math.max(...ys)<1.5);
   if(!complete)bareCount=geometry.length;else assert.ok(geometry.length>bareCount);
 }
+// Protect the schematic deck/frame contact fix: both nominal rails use the
+// shared deck underside as their top datum, without asserting CAD accuracy.
+const sceneSource=fs.readFileSync(path.join(__dirname,'..','assets/scene-core.js'),'utf8');
+assert.match(sceneSource,/const frameDepth=\.02,frameBase=deck-frameDepth/);
+assert.match(sceneSource,/box\(0,frameBase,z,p\.deckLength\.value,frameDepth/);
+assert.match(sceneSource,/box\(x,frameBase,0,\.02,frameDepth/);
+assert.match(sceneSource,/box\(\.74,deck-\.12,0,\.04,\.12/);
 // No imported 3D models, image textures, audio samples, remote code, or package runtime.
 const root=path.join(__dirname,'..');const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 for(const match of html.matchAll(/(?:src|href)="([^"]+)"/g)){
