@@ -23,25 +23,8 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Reject tracked sensitive files
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          import pathlib, subprocess, sys
-          paths = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
-          blocked = []
-          for value in filter(None, paths):
-              name = pathlib.PurePosixPath(value).name.lower()
-              template = name.endswith(('.example', '.sample', '.template'))
-              env = (name == '.env' or name.startswith('.env.')) and not template
-              key = name.endswith(('.key', '.p12', '.pfx')) or name in ('id_rsa', 'id_ed25519', '.credentials')
-              if env or key:
-                  blocked.append(value)
-          if blocked:
-              print('::error::Sensitive-file policy failed. Review tracked environment/key files privately; no file contents are logged.')
-              sys.exit(1)
-          print('Sensitive-file policy passed.')
-          PY
+      - name: Reject tracked sensitive files and source-local scanner ignores
+        run: python3 .github/security/security_gate.py files
       - name: Install checksum-verified Gitleaks
         shell: bash
         run: |
@@ -55,17 +38,15 @@ jobs:
           tar -xzf "$scan_dir/gitleaks.tar.gz" -C "$scan_dir" gitleaks
           printf '[extend]\nuseDefault = true\n' > "$scan_dir/config.toml"
           : > "$scan_dir/empty-ignore"
+      - name: Run executable security-gate regression tests
+        env:
+          GITLEAKS_BIN: ${{ runner.temp }}/security-baseline/gitleaks
+        run: python3 -m unittest discover -s .github/security -p test_security_gate.py -v
       - name: Scan reachable Git history without disclosing matches
         shell: bash
         run: |
           set -euo pipefail
           scan_dir="$RUNNER_TEMP/security-baseline"
-          if ! "$scan_dir/gitleaks" git . --log-opts="--all" \
-            --config "$scan_dir/config.toml" \
-            --gitleaks-ignore-path "$scan_dir/empty-ignore" \
-            --ignore-gitleaks-allow --redact=100 --no-banner --no-color \
-            --timeout 240 --max-archive-depth 2 --log-level fatal > /dev/null 2>&1; then
-            echo '::error::Secret scan failed or found a potential secret. Stop and investigate privately. Never paste matching values into logs, issues or PRs.'
-            exit 1
-          fi
-          echo 'Secret scan passed.'
+          python3 .github/security/security_gate.py scan \
+            --scanner "$scan_dir/gitleaks" --config "$scan_dir/config.toml" \
+            --ignore-path "$scan_dir/empty-ignore"
