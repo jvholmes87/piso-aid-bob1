@@ -1,0 +1,52 @@
+name: Security checks
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  baseline:
+    name: Security baseline
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source without persistent credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Reject tracked sensitive files and source-local scanner ignores
+        run: python3 .github/security/security_gate.py files
+      - name: Install checksum-verified Gitleaks
+        shell: bash
+        run: |
+          set -euo pipefail
+          scan_dir="$RUNNER_TEMP/security-baseline"
+          mkdir -p "$scan_dir"
+          curl --fail --location --retry 3 --max-time 90 \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz \
+            --output "$scan_dir/gitleaks.tar.gz"
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  $scan_dir/gitleaks.tar.gz" | sha256sum --check --status
+          tar -xzf "$scan_dir/gitleaks.tar.gz" -C "$scan_dir" gitleaks
+          printf '[extend]\nuseDefault = true\n' > "$scan_dir/config.toml"
+          : > "$scan_dir/empty-ignore"
+      - name: Run executable security-gate regression tests
+        env:
+          GITLEAKS_BIN: ${{ runner.temp }}/security-baseline/gitleaks
+        run: python3 -m unittest discover -s .github/security -p test_security_gate.py -v
+      - name: Scan reachable Git history without disclosing matches
+        shell: bash
+        run: |
+          set -euo pipefail
+          scan_dir="$RUNNER_TEMP/security-baseline"
+          python3 .github/security/security_gate.py scan \
+            --scanner "$scan_dir/gitleaks" --config "$scan_dir/config.toml" \
+            --ignore-path "$scan_dir/empty-ignore"
